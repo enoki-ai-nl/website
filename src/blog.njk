@@ -1,13 +1,22 @@
 ---
 layout: base.njk
-title: "Blog"
+title: "Enoki | Blog"
 headExtra: |
   <meta name="description" content="Blog list">
-  <script type="module" src="/js/blog.js"></script>
 ---
 
 <h1 class="text-3xl font-bold mb-6">Blog</h1>
-<section id="blog-list" class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    <!-- Blog cards will be injected here -->
+<section class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  {%- for post in collections.post -%}
+    <a href="{{ post.url }}" class="block overflow-hidden bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+      {% if post.data.image %}
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}" class="w-full h-40 object-cover rounded-t-lg">
+      {% endif %}
+      <div class="p-6">
+        <h2 class="text-xl font-bold mb-2">{{ post.data.title }}</h2>
+        <p class="text-gray-700">{{ post.data.excerpt }}</p>
+      </div>
+    </a>
+  {%- endfor -%}
 </section>
 

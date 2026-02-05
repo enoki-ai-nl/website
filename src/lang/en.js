@@ -96,5 +96,9 @@ export default {
     "footer": {
         "email": "info@enoki-ai.nl",
         "followUs": "Follow Us"
+    },
+    "blog": {
+        "title": "Blog",
+        "backToPosts": "Back to posts",
     }
 };

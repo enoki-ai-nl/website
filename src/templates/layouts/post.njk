@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+
+<article class="prose bg-white rounded-3xl max-w-[800px] mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
+  {% if image %}
+    <div class="rounded-t-3xl overflow-hidden h-80 object-fit">
+        <img src="{{ image }}" alt="{{ title }}" class="w-full h-full object-cover" itemprop="image"/>
+    </div>
+  {% endif %}
+  <header class="mb-8 p-6 md:p-10 ">
+    <h1 class="text-4xl font-bold mb-4" itemprop="headline">{{ title }}</h1>
+    
+    <div class="flex items-center text-gray-600 text-sm space-x-4">
+      {% if date %}
+      <time datetime="{{ date }}" itemprop="datePublished">
+        {{ date }}
+      </time>
+      {% endif %}
+    </div>
+  </header>
+
+  <div itemprop="articleBody" class="px-6 md:px-10 pb-16">
+    {{ content | safe }}
+  </div>
+
+  <footer class="mt-12 py-6 px-6 md:px-10">
+    <a href="/blog" class="text-secondary-color font-semibold hover:underline">← <span data-i18n="blog.backToPosts">Back to posts</span></a>
+  </footer>
+</article>
