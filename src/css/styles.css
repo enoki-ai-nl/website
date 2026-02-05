@@ -238,3 +238,16 @@ ul {
 .svg-white-filter {
     filter: brightness(0) invert(1);
 }
+
+/* Blog card styles */
+.blog-card {
+    background: white;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+.blog-card h2 a { color: var(--text-color); }
+.blog-card p { color: rgba(47,79,79,0.9); }
