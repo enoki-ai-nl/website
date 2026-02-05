@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enoki | Blog</title>
+    <title>Gaia Demo: Stel Ruimtelijke Vragen in Normale Taal</title>
 
     <link rel="stylesheet" href="/css/style.css">
     <script type="module" src="/js/main.js"></script>
@@ -23,9 +23,6 @@
     <meta name="twitter:title" content="Enoki | AI, verbonden in waarden">
     <meta name="twitter:description" content="Enoki - AI, geworteld in waarden. AI verandert onze wereld in een ongekend tempo. Als organisatie wil je meebewegen, maar niet ten koste van je waarden en visie. Big-tech suggereert dat hun weg de enige weg is - maar er zijn sterke alternatieven en wij weten dat het anders kan. Enoki helpt je bij het implementeren van AI-oplossingen waarbij jij aan het roer blijft. Als autonome organisatie kies je voor open oplossingen en neem je zelf verantwoordelijkheid voor de toekomst van AI.">
     <meta name="twitter:image" content="/img/enoki_logo.png">
-
-    
-      <meta name="description" content="Blog list">
 
     
 
@@ -183,25 +180,51 @@
       <main class="container mx-auto px-4 mt-16">
         <div class="container mx-auto px-4 py-8 max-w-[1500px]">
           
-<h1 class="text-3xl font-bold mb-6">Blog</h1>
-<section class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"><a href="/posts/first-post/" class="block overflow-hidden bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<article class="prose bg-white rounded-3xl max-w-[800px] mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
+  
+    <div class="rounded-t-3xl overflow-hidden h-80 object-fit">
+        <img src="/img/kamiel_sytze.jpg" alt="Gaia Demo: Stel Ruimtelijke Vragen in Normale Taal" class="w-full h-full object-cover" itemprop="image"/>
+    </div>
+  
+  <header class="mb-8 p-6 md:p-10 ">
+    <h1 class="text-4xl font-bold mb-4" itemprop="headline">Gaia Demo: Stel Ruimtelijke Vragen in Normale Taal</h1>
+    
+    <div class="flex items-center text-gray-600 text-sm space-x-4">
       
-        <img src="/img/kamiel_sytze.jpg" alt="First Post" class="w-full h-40 object-cover rounded-t-lg">
+      <time datetime="2026-02-05" itemprop="datePublished">
+        2026-02-05
+      </time>
       
-      <div class="p-6">
-        <h2 class="text-xl font-bold mb-2">First Post</h2>
-        <p class="text-gray-700">This is the first example blog post.</p>
-      </div>
-    </a><a href="/posts/present-gaia/" class="block overflow-hidden bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-      
-        <img src="/img/kamiel_sytze.jpg" alt="Gaia Demo: Stel Ruimtelijke Vragen in Normale Taal" class="w-full h-40 object-cover rounded-t-lg">
-      
-      <div class="p-6">
-        <h2 class="text-xl font-bold mb-2">Gaia Demo: Stel Ruimtelijke Vragen in Normale Taal</h2>
-        <p class="text-gray-700">We lanceren de eerste demo van Gaia: een applicatie die een LLM combineert met kaartvisualisatie, zodat je ruimtelijke vragen kunt stellen zonder GIS-expertise.</p>
-      </div>
-    </a></section>
+    </div>
+  </header>
 
+  <div itemprop="articleBody" class="px-6 md:px-10 pb-16">
+    <p><strong>Welk park(en) in Rotterdam liggen binnen 500 meter van een tramhalte?</strong></p>
+<p>Dit is het type vraag dat je eigenlijk alleen correct kunt beantwoorden met enige GIS‑expertise: de juiste data zoeken, inladen (en evt. reprojecteren) en dan nog de juiste tool vinden in QGIS. Dat kan makkelijker.</p>
+<p>De afgelopen maanden hebben we gewerkt aan <strong>Gaia</strong>: een applicatie die een LLM combineert met kaartvisualisatie, zodat je ruimtelijke vragen in 'normale taal' kunt stellen.</p>
+<h2>Hoe werkt het?</h2>
+<p>Je stelt een vraag, het model vertaalt dit naar een ruimtelijke query, en je ziet het antwoord direct op de kaart.</p>
+<h2>Probeer de demo</h2>
+<p>We hebben een demo voorbereid, waarin verschillende datasets in en rondom Rotterdam al klaarstaan: de parken, de tramlijnen en <em>markante plekken</em>. Er staan drie voorbeeldvragen klaar in de chat‑interface, zodat je direct kunt testen.</p>
+<p>👉 <strong>Link naar demo:</strong> <a href="https://lnkd.in/eRSVHtqG">https://lnkd.in/eRSVHtqG</a></p>
+<p>Dit is een eerste versie. We ontwikkelen iteratief verder, liever op basis van wat gebruikers nodig hebben dan op onze eigen aannames. Dus probeer de demo en laat weten wat je ervan vindt – in de comments of via DM.</p>
+<h2>Voor organisaties</h2>
+<p>Wil je een eigen <strong>Gaia</strong> voor jouw organisatie, met alleen toegang tot jullie (ruimtelijke) data? Wij helpen graag bij het integreren van AI in jouw tooling, op een verantwoorde manier:</p>
+<ul>
+<li>✅ <strong>Flexibele architectuur</strong> → Eenvoudig te migreren naar eigen hosting</li>
+<li>✅ <strong>Data in eigen beheer</strong> → Jouw data blijft waar jij het wilt</li>
+<li>✅ <strong>Open‑source stack</strong> → Geen vendor lock‑in en dure licenties</li>
+</ul>
+<p>📩 Neem contact op via <strong>info@enoki-ai.nl</strong> of stuur een DM.</p>
+<hr>
+<p><em>Stay tuned:</em> In de volgende post vertellen we meer over de tech‑stack die we gebruiken, en waarom we bewust voor deze aanpak hebben gekozen.</p>
+
+  </div>
+
+  <footer class="mt-12 py-6 px-6 md:px-10">
+    <a href="/blog" class="text-secondary-color font-semibold hover:underline">← <span data-i18n="blog.backToPosts">Back to posts</span></a>
+  </footer>
+</article>
 
         </div>
       </main>
