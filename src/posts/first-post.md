@@ -3,6 +3,7 @@ title: "First Post"
 date: "2026-02-05"
 excerpt: "This is the first example blog post."
 slug: "first-post"
+layout: base.njk
 ---
 
 Welcome to the first blog post. Replace this Markdown with your real content.

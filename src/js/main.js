@@ -1,13 +1,3 @@
-// Import Alpine.js
-import Alpine from 'alpinejs'
-
-// Import our styles
-import '../css/styles.css'
-
-// Initialize Alpine.js
-window.Alpine = Alpine
-Alpine.start()
-
 // Import translations
 import enTranslations from '../lang/en.js'
 import nlTranslations from '../lang/nl.js'

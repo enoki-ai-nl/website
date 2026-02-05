@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default("Enoki | AI, geworteld in waarden") }}</title>
+
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+    <script type="module" src="/js/main.js"></script>
+
+    <!-- icon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Enoki - AI, geworteld in waarden. AI verandert onze wereld in een ongekend tempo. Als organisatie wil je meebewegen, maar niet ten koste van je waarden en visie. Big-tech suggereert dat hun weg de enige weg is - maar er zijn sterke alternatieven en wij weten dat het anders kan. Enoki helpt je bij het implementeren van AI-oplossingen waarbij jij aan het roer blijft. Als autonome organisatie kies je voor open oplossingen en neem je zelf verantwoordelijkheid voor de toekomst van AI.">
+    <meta name="keywords" content="Enoki, AI, ethical AI, ethische AI, verantwoorde AI, AI duurzaamheid, AI advies, AI cursus, prompt training, AI training">
+    <meta name="author" content="Enoki Team">
+    <meta property="og:title" content="Enoki | AI, geworteld in waarden">
+    <meta property="og:description" content="Enoki - AI, geworteld in waarden. AI verandert onze wereld in een ongekend tempo. Als organisatie wil je meebewegen, maar niet ten koste van je waarden en visie. Big-tech suggereert dat hun weg de enige weg is - maar er zijn sterke alternatieven en wij weten dat het anders kan. Enoki helpt je bij het implementeren van AI-oplossingen waarbij jij aan het roer blijft. Als autonome organisatie kies je voor open oplossingen en neem je zelf verantwoordelijkheid voor de toekomst van AI.">
+    <meta property="og:image" content="/img/enoki_logo.png">
+    <meta property="og:url" content="https://www.enoki-ai.nl">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enoki | AI, verbonden in waarden">
+    <meta name="twitter:description" content="Enoki - AI, geworteld in waarden. AI verandert onze wereld in een ongekend tempo. Als organisatie wil je meebewegen, maar niet ten koste van je waarden en visie. Big-tech suggereert dat hun weg de enige weg is - maar er zijn sterke alternatieven en wij weten dat het anders kan. Enoki helpt je bij het implementeren van AI-oplossingen waarbij jij aan het roer blijft. Als autonome organisatie kies je voor open oplossingen en neem je zelf verantwoordelijkheid voor de toekomst van AI.">
+    <meta name="twitter:image" content="/img/enoki_logo.png">
+
+    {% if headExtra %}
+      {{ headExtra | safe }}
+    {% endif %}
+
+  </head>
+
+  <body class="gradient-bg min-h-screen">
+    {% include "header.njk" %}
+    <div class="flex flex-col min-h-screen justify-between">
+      <main class="container mx-auto px-4 mt-16">
+        <div class="container mx-auto px-4 py-8 max-w-[1500px]">
+          {{ content | safe }}
+        </div>
+      </main>
+      {% include "footer.njk" %}
+    </div>
+
+    <script src="/js/alpine.js"></script>
+  </body>
+</html>

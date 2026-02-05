@@ -7,6 +7,7 @@ export default {
         "why": "Why?",
         "approach": "Our approach",
         "who": "Who we are",
+        "blog": "Blog",
         "contact": "Contact"
     },
     "header": {

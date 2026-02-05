@@ -7,6 +7,7 @@ export default {
         "why": "Waarom?",
         "approach": "Onze aanpak",
         "who": "Wie we zijn",
+        "blog": "Blog",
         "contact": "Contact"
     },
     "header": {
