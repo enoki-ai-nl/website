@@ -125,7 +125,7 @@ ul, ol {
     position: absolute;
     bottom: -8px;
     left: 0;
-    width: 60%;
+    width: 100px;
     height: 3px;
     background: var(--color-secondary);
     border-radius: 2px;
