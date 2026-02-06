@@ -16,7 +16,7 @@ export default {
         "contact-us": "Neem contact met ons op"
     },
     "mission": {
-        "title": "Het waarom",
+        "title": "Waarom waardegedreven AI?",
         "mainText": "AI verandert onze wereld in een ongekend tempo. Als organisatie wil je meebewegen, maar niet ten koste van je waarden en visie. Big-tech suggereert dat hun weg de enige weg is - maar er zijn sterke alternatieven en wij weten dat het anders kan. Enoki helpt je bij het implementeren van AI-oplossingen waarbij jij aan het roer blijft. Als autonome organisatie kies je voor open oplossingen en neem je zelf verantwoordelijkheid voor de toekomst van AI.",
         "values": {
             "title": "Waar we voor staan",

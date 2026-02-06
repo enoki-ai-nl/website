@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap')
+layer(base);
 
 /* Import Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+/* Define custom theme colors for Tailwind v4 */
+@theme {
+  --color-background: #F9F6EE;
+  --color-background-lighter: #F1EDE4;
+  --color-primary: #2F4F4F;
+  --color-secondary: #26A69A;
+  --color-earth: #D2B48C;
+  --color-earth-dark: #B89B76;
+  --color-brown: #5D4037;
+  --color-gold: #DAA520;
+}
 
 /* Custom fonts */
 @font-face {
@@ -70,18 +80,6 @@
     font-style: normal;
 }
 
-:root {
-    /* New Enoki Color Palette */
-    --color-background: #F9F6EE; /* Ivory/cream for backgrounds */
-    --color-background-lighter: #F1EDE4;
-    --color-primary: #2F4F4F;    /* Forest green for primary elements */
-    --color-secondary: #26A69A;     /* Teal carried over from current branding */
-    --color-earth: #D2B48C;      /* Earthy tan for mushroom stems */
-    --color-earth-dark: #B89B76; /* Darker tan */
-    --color-brown: #5D4037;      /* Deep brown for grounding elements */
-    --color-gold: #DAA520;      /* Subtle gold for highlights */
-}
-
 body {
     font-family: 'Outfit', 'Ubuntu', 'Space Grotesk', sans-serif;
     line-height: 1.6;
@@ -95,24 +93,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-h1 {
-    font-size: 4.5rem; /* 7xl */
+h1, h2, h3 {
+    margin-top: 1rem;
 }
 
 .francois-one {
     font-family: 'Francois One', sans-serif;
 }
 
-/* Override Bootstrap's default link colors */
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
+.prose a {
+    text-decoration: underline;
 }
 
-a:hover {
-    color: var(--color-gold);
-    text-decoration: none;
+p {
+    margin-bottom: 0.75rem;
 }
 
 /* Add bullet points styling */
@@ -121,36 +115,9 @@ ul {
     padding-left: 1.5rem;
 }
 
-.contact-form input:focus, 
-.contact-form textarea:focus {
-    outline: none;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: var(--color-primary);
-    opacity: 0.5;
-}
-
-.section-title {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-.transition-ease-07 {
-    transition: all 0.7s ease;
-}
-
-.morphing-element {
-    transition: d 0.7s ease, fill 0.7s ease, stroke 0.7s ease, stroke-width 0.7s ease,
-                x 0.7s ease, y 0.7s ease, width 0.7s ease, height 0.7s ease;
-}
-
-.enoki-svg {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
+ul, ol {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .section-title::after {
@@ -164,56 +131,11 @@ ul {
     border-radius: 2px;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.cta-button {
-    animation: pulse 2s infinite;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background-color: var(--accent-color-1);
-    color: var(--color-primary);
-    box-shadow: 0 4px 6px rgba(210, 180, 140, 0.3);
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    background-color: var(--accent-color-1-dark);
-    box-shadow: 0 6px 8px rgba(210, 180, 140, 0.4);
-}
-
-.language-switcher .lang-btn {
-    transition: all 0.3s ease;
-}
 
 .language-switcher .lang-btn.active {
     color: var(--color-secondary);
-    font-weight: 600;
-}
-
-.language-switcher .lang-btn:hover {
-    color: var(--color-gold);
 }
 
 .svg-white-filter {
     filter: brightness(0) invert(1);
 }
-
-/* Blog card styles */
-.blog-card {
-    background: white;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(16,24,40,0.08);
-}
-
-.blog-card h2 a { color: var(--color-primary); }
-.blog-card p { color: rgba(47,79,79,0.9); }

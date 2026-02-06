@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import postcss from 'postcss';
-import tailwindcss from 'tailwindcss';
+import tailwindcss from '@tailwindcss/postcss';
 import cssnano from 'cssnano';
 
 export default async function(eleventyConfig) {
@@ -29,9 +29,6 @@ export default async function(eleventyConfig) {
       from: tailwindInputPath,
       to: tailwindOutputPath,
     });
-    console.log('Tailwind CSS compiled successfully.');
-    console.log('Minified CSS size:', (result.css.length / 1024).toFixed(2), 'KB');
-    console.log('written to ', tailwindOutputPath);
     fs.writeFileSync(tailwindOutputPath, result.css);
   });
 
@@ -44,7 +41,7 @@ export default async function(eleventyConfig) {
       preset: 'default',
     }),
   ]);
-  eleventyConfig.addWatchTarget('assets/css/**/*.css');
+  eleventyConfig.addWatchTarget('src/css/**/*.css');
 
   return {
     dir: {

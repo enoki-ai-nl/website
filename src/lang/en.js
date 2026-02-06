@@ -16,7 +16,7 @@ export default {
         "contact-us": "Get in touch",
     },
     "mission": {
-        "title": "The why",
+        "title": "Why value-driven AI?",
         "mainText": "AI is changing our world at an unprecedented pace. As an organization, you want to move along, but not at the expense of your values and vision. Big-tech suggests that their way is the only way - but there are strong alternatives and we believe it can be different. Enoki helps you implement AI solutions while you remain in control. As an autonomous organization, you choose open solutions and take responsibility for the future of AI yourself.",
         "values": {
             "title": "What we stand for",

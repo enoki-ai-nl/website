@@ -8,7 +8,7 @@ layout: post.njk
 tags: post
 ---
 
-**Welk park(en) in Rotterdam liggen binnen 500 meter van een tramhalte?**
+## Welk park(en) in Rotterdam liggen binnen 500 meter van een tramhalte?
 
 Dit is het type vraag dat je eigenlijk alleen correct kunt beantwoorden met enige GIS‑expertise: de juiste data zoeken, inladen (en evt. reprojecteren) en dan nog de juiste tool vinden in QGIS. Dat kan makkelijker.
 
@@ -22,7 +22,7 @@ Je stelt een vraag, het model vertaalt dit naar een ruimtelijke query, en je zie
 
 We hebben een demo voorbereid, waarin verschillende datasets in en rondom Rotterdam al klaarstaan: de parken, de tramlijnen en *markante plekken*. Er staan drie voorbeeldvragen klaar in de chat‑interface, zodat je direct kunt testen.
 
-👉 **Link naar demo:** <https://lnkd.in/eRSVHtqG>
+👉 **Link naar demo:** [gaia.enoki-ai.nl](https://gaia.enoki-ai.nl)
 
 Dit is een eerste versie. We ontwikkelen iteratief verder, liever op basis van wat gebruikers nodig hebben dan op onze eigen aannames. Dus probeer de demo en laat weten wat je ervan vindt – in de comments of via DM.
 
@@ -36,6 +36,5 @@ Wil je een eigen **Gaia** voor jouw organisatie, met alleen toegang tot jullie (
 
 📩 Neem contact op via **info@enoki-ai.nl** of stuur een DM.
 
----
 
 *Stay tuned:* In de volgende post vertellen we meer over de tech‑stack die we gebruiken, en waarom we bewust voor deze aanpak hebben gekozen.
