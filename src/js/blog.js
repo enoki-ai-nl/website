@@ -27,7 +27,7 @@ function renderPosts(posts) {
             <h2 class="text-xl font-semibold mb-2"><a href="${p.url}">${escapeHtml(p.title)}</a></h2>
             <p class="text-sm text-gray-600 mb-3">${escapeHtml(p.date)}</p>
             <p class="text-gray-700 mb-4">${escapeHtml(p.excerpt)}</p>
-            <a class="text-secondary-color font-semibold" href="${p.url}">Read more →</a>
+            <a class="text-secondary font-semibold" href="${p.url}">Read more →</a>
           </div>
         </article>
       `;

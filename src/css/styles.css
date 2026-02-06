@@ -72,42 +72,22 @@
 
 :root {
     /* New Enoki Color Palette */
-    --background-color: #F9F6EE;    /* Ivory/cream for backgrounds */
-    --text-color: #2F4F4F;          /* Forest green for text */
-    --background-color-2: #F1EDE4;  /* Lighter ivory for secondary backgrounds */
-    --primary-color: #2F4F4F;       /* Forest green for primary elements */
-    --secondary-color: #26A69A;     /* Teal carried over from current branding */
-    --accent-color-1: #D2B48C;      /* Earthy tan for mushroom stems */
-    --accent-color-1-dark: #B89B76; /* Darker tan */
-    --accent-color-2: #5D4037;      /* Deep brown for grounding elements */
-    --accent-color-3: #DAA520;      /* Subtle gold for highlights */
-    --hover-color: #5D4037;         /* Deep brown for hover states */
-    --footer-bg: #2F4F4F;           /* Forest green for footer */
+    --color-background: #F9F6EE; /* Ivory/cream for backgrounds */
+    --color-background-lighter: #F1EDE4;
+    --color-primary: #2F4F4F;    /* Forest green for primary elements */
+    --color-secondary: #26A69A;     /* Teal carried over from current branding */
+    --color-earth: #D2B48C;      /* Earthy tan for mushroom stems */
+    --color-earth-dark: #B89B76; /* Darker tan */
+    --color-brown: #5D4037;      /* Deep brown for grounding elements */
+    --color-gold: #DAA520;      /* Subtle gold for highlights */
 }
 
 body {
     font-family: 'Outfit', 'Ubuntu', 'Space Grotesk', sans-serif;
     line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--color-background);
+    color: var(--color-primary);
     position: relative;
-}
-
-.root-background {
-    position: absolute;
-    top: 64px; /* height of nav */
-    left: 0;
-    width: 100%;
-    height: 800px;
-    z-index: 99;
-    opacity: 0.65;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.root-background path {
-    fill: var(--accent-color-1);
-    opacity: 0.1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -125,13 +105,13 @@ h1 {
 
 /* Override Bootstrap's default link colors */
 a {
-    color: var(--text-color);
+    color: var(--color-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--hover-color);
+    color: var(--color-gold);
     text-decoration: none;
 }
 
@@ -148,22 +128,8 @@ ul {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: var(--text-color);
+    color: var(--color-primary);
     opacity: 0.5;
-}
-
-.navbar {
-    border-bottom: 1px solid rgba(210, 180, 140, 0.2);
-}
-
-.logo-container {
-    width: 40px;
-}
-
-.footer {
-    background-color: var(--footer-bg);
-    border-top: 1px solid rgba(210, 180, 140, 0.2);
-    color: var(--background-color);
 }
 
 .section-title {
@@ -194,7 +160,7 @@ ul {
     left: 0;
     width: 60%;
     height: 3px;
-    background: var(--secondary-color);
+    background: var(--color-secondary);
     border-radius: 2px;
 }
 
@@ -211,7 +177,7 @@ ul {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     background-color: var(--accent-color-1);
-    color: var(--text-color);
+    color: var(--color-primary);
     box-shadow: 0 4px 6px rgba(210, 180, 140, 0.3);
     transition: all 0.3s ease;
 }
@@ -227,12 +193,12 @@ ul {
 }
 
 .language-switcher .lang-btn.active {
-    color: var(--secondary-color);
+    color: var(--color-secondary);
     font-weight: 600;
 }
 
 .language-switcher .lang-btn:hover {
-    color: var(--accent-color-3);
+    color: var(--color-gold);
 }
 
 .svg-white-filter {
@@ -249,5 +215,5 @@ ul {
     box-shadow: 0 10px 30px rgba(16,24,40,0.08);
 }
 
-.blog-card h2 a { color: var(--text-color); }
+.blog-card h2 a { color: var(--color-primary); }
 .blog-card p { color: rgba(47,79,79,0.9); }
