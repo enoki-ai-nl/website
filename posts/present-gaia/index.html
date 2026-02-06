@@ -28,9 +28,9 @@
 
   </head>
 
-  <body class="gradient-bg min-h-screen">
+  <body class="min-h-screen">
     <nav
-  class="bg-[var(--footer-bg)] fixed top-0 w-full z-50 shadow-md"
+  class="bg-primary fixed top-0 w-full z-50 shadow-md"
   x-data="{ isOpen: false }"
 >
   <div class="max-w-[1500px] mx-auto px-4">
@@ -95,25 +95,23 @@
           <a
             href="/#why"
             data-i18n="nav.why"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Why</a
           >
-          <!-- <a href="#approach" data-i18n="nav.approach"
-                            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white">Approach</a> -->
           <a
             href="/#who"
             data-i18n="nav.who"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Who</a
           >
           <a
             href="/blog"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Blog</a
           >
           <a
             href="/#contact"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Contact</a
           >
           <div
@@ -146,31 +144,48 @@
           href="/#why"
           data-i18n="nav.why"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Why</a
         >
-        <!-- <a href="#approach" data-i18n="nav.approach" @click="isOpen = !isOpen"
-                        class="px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-gray-700">Approach</a> -->
         <a
           href="/#who"
           data-i18n="nav.who"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Who</a
         >
         <a 
           href="/blog"
           data-i18n="nav.blog"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Blog</a
         >
         <a
           href="/#contact"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Contact</a
         >
+        <div
+            class="language-switcher flex items-center space-x-2 pl-4 mt-4"
+          >
+            <button
+              id="lang-en"
+              class="lang-btn text-white hover:text-gold px-2 py-1 rounded text-sm font-medium transition-all ease-in-out duration-300 cursor-pointer"
+              data-lang="en"
+            >
+              EN
+            </button>
+            <span class="text-gray-400">/</span>
+            <button
+              id="lang-nl"
+              class="lang-btn text-white hover:text-gold px-2 py-1 rounded text-sm font-medium transition-all ease-in-out duration-300 cursor-pointer"
+              data-lang="nl"
+            >
+              NL
+            </button>
+          </div>
       </div>
     </div>
   </div>
@@ -186,7 +201,7 @@
         <img src="/img/kamiel_sytze.jpg" alt="Gaia - Geovisueel prompten" class="w-full h-full object-cover" itemprop="image"/>
     </div>
   
-  <header class="mb-8 p-6 md:p-10 ">
+  <header class="mb-8 px-6 pt-3 md:px-10 md:pt-4 ">
     <h1 class="text-4xl font-bold mb-4" itemprop="headline">Gaia - Geovisueel prompten</h1>
     
     <div class="flex items-center text-gray-600 text-sm space-x-4">
@@ -199,14 +214,14 @@
   </header>
 
   <div itemprop="articleBody" class="px-6 md:px-10 pb-16">
-    <p><strong>Welk park(en) in Rotterdam liggen binnen 500 meter van een tramhalte?</strong></p>
+    <h2>Welk park(en) in Rotterdam liggen binnen 500 meter van een tramhalte?</h2>
 <p>Dit is het type vraag dat je eigenlijk alleen correct kunt beantwoorden met enige GIS‑expertise: de juiste data zoeken, inladen (en evt. reprojecteren) en dan nog de juiste tool vinden in QGIS. Dat kan makkelijker.</p>
 <p>De afgelopen maanden hebben we gewerkt aan <strong>Gaia</strong>: een applicatie die een LLM combineert met kaartvisualisatie, zodat je ruimtelijke vragen in 'normale taal' kunt stellen.</p>
 <h2>Hoe werkt het?</h2>
 <p>Je stelt een vraag, het model vertaalt dit naar een ruimtelijke query, en je ziet het antwoord direct op de kaart.</p>
 <h2>Probeer de demo</h2>
 <p>We hebben een demo voorbereid, waarin verschillende datasets in en rondom Rotterdam al klaarstaan: de parken, de tramlijnen en <em>markante plekken</em>. Er staan drie voorbeeldvragen klaar in de chat‑interface, zodat je direct kunt testen.</p>
-<p>👉 <strong>Link naar demo:</strong> <a href="https://lnkd.in/eRSVHtqG">https://lnkd.in/eRSVHtqG</a></p>
+<p>👉 <strong>Link naar demo:</strong> <a href="https://gaia.enoki-ai.nl">gaia.enoki-ai.nl</a></p>
 <p>Dit is een eerste versie. We ontwikkelen iteratief verder, liever op basis van wat gebruikers nodig hebben dan op onze eigen aannames. Dus probeer de demo en laat weten wat je ervan vindt – in de comments of via DM.</p>
 <h2>Voor organisaties</h2>
 <p>Wil je een eigen <strong>Gaia</strong> voor jouw organisatie, met alleen toegang tot jullie (ruimtelijke) data? Wij helpen graag bij het integreren van AI in jouw tooling, op een verantwoorde manier:</p>
@@ -216,19 +231,18 @@
 <li>✅ <strong>Open‑source stack</strong> → Geen vendor lock‑in en dure licenties</li>
 </ul>
 <p>📩 Neem contact op via <strong>info@enoki-ai.nl</strong> of stuur een DM.</p>
-<hr>
 <p><em>Stay tuned:</em> In de volgende post vertellen we meer over de tech‑stack die we gebruiken, en waarom we bewust voor deze aanpak hebben gekozen.</p>
 
   </div>
 
   <footer class="mt-12 py-6 px-6 md:px-10">
-    <a href="/blog" class="text-secondary-color font-semibold hover:underline">← <span data-i18n="blog.backToPosts">Back to posts</span></a>
+    <a href="/blog" class="text-secondary font-semibold hover:underline">← <span data-i18n="blog.backToPosts">Back to posts</span></a>
   </footer>
 </article>
 
         </div>
       </main>
-      <footer class="site-footer bg-footer-bg text-background-color py-8">
+      <footer class="site-footer bg-primary text-background py-8">
   <div class="container mx-auto px-4 text-center">
     <p class="text-sm">© 2026 - Enoki</p>
   </div>

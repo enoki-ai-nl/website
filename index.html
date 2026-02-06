@@ -28,9 +28,9 @@
 
   </head>
 
-  <body class="gradient-bg min-h-screen">
+  <body class="min-h-screen">
     <nav
-  class="bg-[var(--footer-bg)] fixed top-0 w-full z-50 shadow-md"
+  class="bg-primary fixed top-0 w-full z-50 shadow-md"
   x-data="{ isOpen: false }"
 >
   <div class="max-w-[1500px] mx-auto px-4">
@@ -95,25 +95,23 @@
           <a
             href="/#why"
             data-i18n="nav.why"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Why</a
           >
-          <!-- <a href="#approach" data-i18n="nav.approach"
-                            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white">Approach</a> -->
           <a
             href="/#who"
             data-i18n="nav.who"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Who</a
           >
           <a
             href="/blog"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Blog</a
           >
           <a
             href="/#contact"
-            class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
+            class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-white"
             >Contact</a
           >
           <div
@@ -146,31 +144,48 @@
           href="/#why"
           data-i18n="nav.why"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Why</a
         >
-        <!-- <a href="#approach" data-i18n="nav.approach" @click="isOpen = !isOpen"
-                        class="px-3 py-2 rounded-md text-sm border-transparent border font-medium hover:border-gray-700">Approach</a> -->
         <a
           href="/#who"
           data-i18n="nav.who"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Who</a
         >
         <a 
           href="/blog"
           data-i18n="nav.blog"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Blog</a
         >
         <a
           href="/#contact"
           @click="isOpen = !isOpen"
-          class="text-white hover:text-[var(--accent-color-1-dark)] px-3 py-2 rounded-md text-sm border-transparent border font-medium"
+          class="text-white hover:text-earth-dark px-3 py-2 rounded-md text-sm border-transparent border font-medium"
           >Contact</a
         >
+        <div
+            class="language-switcher flex items-center space-x-2 pl-4 mt-4"
+          >
+            <button
+              id="lang-en"
+              class="lang-btn text-white hover:text-gold px-2 py-1 rounded text-sm font-medium transition-all ease-in-out duration-300 cursor-pointer"
+              data-lang="en"
+            >
+              EN
+            </button>
+            <span class="text-gray-400">/</span>
+            <button
+              id="lang-nl"
+              class="lang-btn text-white hover:text-gold px-2 py-1 rounded text-sm font-medium transition-all ease-in-out duration-300 cursor-pointer"
+              data-lang="nl"
+            >
+              NL
+            </button>
+          </div>
       </div>
     </div>
   </div>
@@ -181,9 +196,9 @@
         <div class="container mx-auto px-4 py-8 max-w-[1500px]">
           
 <!-- Title Section -->
-<div id="section-title" class="w-full md:mt-20">
+<div class="w-full md:mt-20">
     <div
-        class="bg-[var(--background-color-2)] rounded-3xl mb-12 flex justify-between lg:min-h-[500px]"
+        class="bg-background-lighter rounded-3xl mb-12 flex justify-between lg:min-h-[500px]"
     >
         <div class="flex flex-col md:flex-row w-full">
             <div class="flex flex-col justify-between p-8 md:p-16 w-full md:w-2/3 z-10">
@@ -194,7 +209,7 @@
                 <div class="flex justify-center mt-12 md:mt-5 lg:mt-0 md:justify-start">
                     <a href="#contact">
                         <button
-                            class="w-full bg-[var(--accent-color-1-dark)] text-white px-6 py-4 rounded-lg hover:bg-[var(--secondary-color)] transition-colors font-medium text-lg"
+                            class="w-full bg-earth-dark text-white px-6 py-4 rounded-lg hover:bg-secondary transition-colors font-medium text-lg"
                             data-i18n="header.contact-us">
                             Contact us
                         </button>
@@ -211,22 +226,22 @@
 <!-- Mission Section -->
 <div id="why" class="w-full mb-16">
     <div class="bg-white p-8 md:p-16 rounded-3xl">
-        <h2 class="text-3xl font-bold mb-6 section-title" data-i18n="mission.title"></h2>
+        <h2 class="relative text-3xl font-bold mb-10 section-title" data-i18n="mission.title"></h2>
         <p class="text-xl mb-12" data-i18n="mission.mainText"></p>
 
         <h3 class="text-2xl font-bold mb-6 text-center" data-i18n="mission.values.title"></h3>
         <div class="grid lg:grid-cols-3 gap-8">
-            <div class="p-6 bg-[var(--background-color)] rounded-lg flex flex-col h-full">
+            <div class="p-6 bg-background rounded-lg flex flex-col h-full">
                 <h4 class="text-xl font-bold mb-3 text-center" data-i18n="mission.values.openPrivate.title"></h4>
-                <p class="text-center flex-grow flex items-center justify-center" data-i18n="mission.values.openPrivate.description"></p>
+                <p class="text-center grow flex items-center justify-center" data-i18n="mission.values.openPrivate.description"></p>
             </div>
-            <div class="p-6 bg-[var(--background-color)] rounded-lg flex flex-col h-full">
+            <div class="p-6 bg-background rounded-lg flex flex-col h-full">
                 <h4 class="text-xl font-bold mb-3 text-center" data-i18n="mission.values.autonomous.title"></h4>
-                <p class="text-center flex-grow flex items-center justify-center" data-i18n="mission.values.autonomous.description"></p>
+                <p class="text-center grow flex items-center justify-center" data-i18n="mission.values.autonomous.description"></p>
             </div>
-            <div class="p-6 bg-[var(--background-color)] rounded-lg flex flex-col h-full">
+            <div class="p-6 bg-background rounded-lg flex flex-col h-full">
                 <h4 class="text-xl font-bold mb-3 text-center" data-i18n="mission.values.responsible.title"></h4>
-                <p class="text-center flex-grow flex items-center justify-center" data-i18n="mission.values.responsible.description"></p>
+                <p class="text-center grow flex items-center justify-center" data-i18n="mission.values.responsible.description"></p>
             </div>
         </div>
     </div>
@@ -235,13 +250,13 @@
 <!-- Team Section -->
 <div id="who" class="w-full mb-16">
     <div class="bg-white p-8 md:p-16 rounded-3xl">
-        <h2 class="text-3xl font-bold mb-6 section-title" data-i18n="team.title"></h2>
+        <h2 class="relative text-3xl font-bold mb-10 section-title" data-i18n="team.title"></h2>
         <p class="text-xl mb-8" data-i18n="team.description"></p>
         <div class="flex flex-col space-y-5 space-x-0 md:flex-row md:space-y-0 md:space-x-5">
             <div class="flex flex-col w-full md:w-1/2 space-y-5">
-                <div class="flex-grow bg-[var(--background-color)] p-6 rounded-lg">
+                <div class="grow bg-background p-6 rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">
-                        <a href="#" data-i18n-href="team.facilitators.kamiel.linkedin" class="hover:text-[var(--accent-color-1-dark)] transition-colors flex items-center" id="kamiel-linkedin">
+                        <a href="#" data-i18n-href="team.facilitators.kamiel.linkedin" class="transition-colors flex items-center" id="kamiel-linkedin">
                             <span data-i18n="team.facilitators.kamiel.name"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -250,9 +265,9 @@
                     </h3>
                     <p class="text-lg" data-i18n="team.facilitators.kamiel.bio"></p>
                 </div>
-                <div class="flex-grow bg-[var(--background-color)] p-6 rounded-lg">
+                <div class="grow bg-background p-6 rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">
-                        <a href="#" data-i18n-href="team.facilitators.sytze.linkedin" class="hover:text-[var(--accent-color-1-dark)] transition-colors flex items-center" id="sytze-linkedin">
+                        <a href="#" data-i18n-href="team.facilitators.sytze.linkedin" class="transition-colors flex items-center" id="sytze-linkedin">
                             <span data-i18n="team.facilitators.sytze.name"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -272,29 +287,29 @@
 
 <div id="contact" class="w-full mb-16">
     <div class="bg-white p-8 md:p-16 rounded-3xl">
-        <h2 class="text-3xl font-bold mb-6 section-title" data-i18n="contact.title">Contact Us</h2>
+        <h2 class="relative text-3xl font-bold mb-10 section-title" data-i18n="contact.title">Contact Us</h2>
         <div class="md:w-1/2 xl:w-1/3">
             <form id="contactForm" class="contact-form space-y-6">
                 <div>
                     <label for="name" class="block text-base font-medium mb-2"
                         data-i18n="contact.name">Name</label>
                     <input type="text" id="name" name="name" required
-                        class="w-full px-4 py-3 rounded-lg bg-[var(--background-color)] border-2 border-transparent focus:border-[var(--secondary-color)] transition-colors">
+                        class="w-full px-4 py-3 rounded-lg bg-background border-2 border-transparent focus:border-secondary focus:outline-0 transition-colors">
                 </div>
                 <div>
                     <label for="email" class="block text-base font-medium mb-2"
                         data-i18n="contact.email">Email</label>
                     <input type="email" id="email" name="email" required
-                        class="w-full px-4 py-3 rounded-lg bg-[var(--background-color)] border-2 border-transparent focus:border-[var(--secondary-color)] transition-colors">
+                        class="w-full px-4 py-3 rounded-lg bg-background border-2 border-transparent focus:border-secondary focus:outline-0 transition-colors">
                 </div>
                 <div>
                     <label for="message" class="block text-base font-medium mb-2"
                         data-i18n="contact.message">Message</label>
                     <textarea id="message" name="message" rows="5" required
-                        class="w-full px-4 py-3 rounded-lg bg-[var(--background-color)] border-2 border-transparent focus:border-[var(--secondary-color)] transition-colors"></textarea>
+                        class="w-full px-4 py-3 rounded-lg bg-background border-2 border-transparent focus:border-secondary focus:outline-0 transition-colors"></textarea>
                 </div>
                 <button type="submit"
-                    class="w-full bg-[var(--accent-color-1-dark)] text-white px-6 py-4 rounded-lg hover:bg-[var(--secondary-color)] transition-colors font-medium text-lg"
+                    class="w-full bg-earth-dark text-white px-6 py-4 rounded-lg hover:bg-secondary transition-colors font-medium text-lg"
                     data-i18n="contact.submit">
                     Send Message
                 </button>
@@ -307,7 +322,7 @@
 
         </div>
       </main>
-      <footer class="site-footer bg-footer-bg text-background-color py-8">
+      <footer class="site-footer bg-primary text-background py-8">
   <div class="container mx-auto px-4 text-center">
     <p class="text-sm">© 2026 - Enoki</p>
   </div>
