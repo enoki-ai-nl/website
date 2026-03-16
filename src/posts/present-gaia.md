@@ -3,7 +3,7 @@ title: "Gaia - Geovisueel prompten"
 date: "2026-02-05"
 excerpt: "We delen de eerste demo van Gaia: onze applicatie die een LLM combineert met kaartvisualisatie, zodat je ruimtelijke vragen kunt stellen zonder GIS-expertise."
 slug: "gaia-demo-launch"
-image: "/img/kamiel_sytze.jpg"
+image: "/img/gaia_meta_image.png"
 layout: post.njk
 tags: post
 ---
