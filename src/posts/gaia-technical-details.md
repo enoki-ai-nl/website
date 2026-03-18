@@ -1,5 +1,5 @@
 ---
-title: "Gaia: onder de motorkap"
+title: "Gaia - onder de motorkap"
 date: "2026-03-18"
 excerpt: "In de vorige post gaven we aan wat meer te schrijven over de tech stack waarmee Gaia is gebouwd. Want hoe iets gebeurt, is net zo goed belangrijk als wat er gebeurt."
 slug: "gaia-technical-details"
