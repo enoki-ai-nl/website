@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enoki | Blog</title>
+    <title>Gaia: onder de motorkap</title>
 
     <link rel="stylesheet" href="/css/style.css">
     <script type="module" src="/js/main.js"></script>
@@ -23,9 +23,6 @@
     <meta name="twitter:title" content="Enoki | AI, verbonden in waarden">
     <meta name="twitter:description" content="Enoki - AI, geworteld in waarden. AI verandert onze wereld in een ongekend tempo. Als organisatie wil je meebewegen, maar niet ten koste van je waarden en visie. Big-tech suggereert dat hun weg de enige weg is - maar er zijn sterke alternatieven en wij weten dat het anders kan. Enoki helpt je bij het implementeren van AI-oplossingen waarbij jij aan het roer blijft. Als autonome organisatie kies je voor open oplossingen en neem je zelf verantwoordelijkheid voor de toekomst van AI.">
     <meta name="twitter:image" content="/img/enoki_meta.png">
-
-    
-      <meta name="description" content="Blog list">
 
     
 
@@ -197,25 +194,45 @@
       <main class="container mx-auto px-4 mt-16">
         <div class="container mx-auto px-4 py-8 max-w-[1500px]">
           
-<h1 class="text-3xl font-bold mb-6">Blog</h1>
-<section class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"><a href="/posts/gaia-introduction/" class="block overflow-hidden bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<article class="prose bg-white rounded-3xl max-w-[800px] mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
+  
+    <div class="rounded-t-3xl overflow-hidden h-80 object-fit">
+        <img src="/img/Gaia_schematisch_bgwhite.png" alt="Gaia: onder de motorkap" class="w-full h-full object-cover" itemprop="image"/>
+    </div>
+  
+  <header class="mb-8 px-6 pt-3 md:px-10 md:pt-4 ">
+    <h1 class="text-4xl font-bold mb-4" itemprop="headline">Gaia: onder de motorkap</h1>
+    
+    <div class="flex items-center text-gray-600 text-sm space-x-4">
       
-        <img src="/img/gaia_meta_image.png" alt="Gaia - Geovisueel prompten" class="w-full h-40 object-cover rounded-t-lg">
+      <time datetime="2026-03-18" itemprop="datePublished">
+        2026-03-18
+      </time>
       
-      <div class="p-6">
-        <h2 class="text-xl font-bold mb-2">Gaia - Geovisueel prompten</h2>
-        <p class="text-gray-700">We delen de eerste demo van Gaia: onze applicatie die een LLM combineert met kaartvisualisatie, zodat je ruimtelijke vragen kunt stellen zonder GIS-expertise.</p>
-      </div>
-    </a><a href="/posts/gaia-technical-details/" class="block overflow-hidden bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-      
-        <img src="/img/Gaia_schematisch_bgwhite.png" alt="Gaia: onder de motorkap" class="w-full h-40 object-cover rounded-t-lg">
-      
-      <div class="p-6">
-        <h2 class="text-xl font-bold mb-2">Gaia: onder de motorkap</h2>
-        <p class="text-gray-700">In de vorige post gaven we aan wat meer te schrijven over de tech stack waarmee Gaia is gebouwd. Want hoe iets gebeurt, is net zo goed belangrijk als wat er gebeurt.</p>
-      </div>
-    </a></section>
+    </div>
+  </header>
 
+  <div itemprop="articleBody" class="px-6 md:px-10 pb-16">
+    <p>In de vorige post gaven we aan wat meer te schrijven over de tech stack waarmee Gaia is gebouwd. Want hoe iets gebeurt, is net zo goed belangrijk als wat er gebeurt.</p>
+<p>Korte recap: Gaia is een applicatie die een LLM combineert met kaartvisualisatie, zodat je ruimtelijke vragen in normale taal kunt stellen.</p>
+<p>Voor Gaia willen we zoveel mogelijk open-sourcetechnologie gebruiken. Met open-source ben je niet afhankelijk van de eigenaar van de code (want die is er niet) en kun je altijd achterhalen wat er &quot;onder de motorkap&quot; gebeurt. Wel zo fijn: als je een huis bouwt, wil je ook niet dat van de ene op de andere dag de raamkozijnen niet meer passen, of dat je maandelijks moet gaan betalen voor je gordijnen.</p>
+<p>Een applicatie bestaat vaak uit 3 hoofdcomponenten: de frontend (wat de gebruiker ziet), de backend (die gegevens verwerkt) en de database (waar de data wordt opgeslagen).</p>
+<p><img src="../../img/Gaia_schematisch_bgwhite.png" alt="schematische weergave" title="Schematische weergave"></p>
+<p>De frontend van Gaia is ontwikkeld met Next.js, waarbij we Tailwind CSS gebruiken voor het stylen. Voor de interactieve kaart gebruiken we MapLibre.</p>
+<p>De backend is volledig geschreven in Python, met FastAPI als framework.</p>
+<p>De database: PostgreSQL met PostGIS voor geodata.</p>
+<p>We gebruiken Docker om deze componenten te verpakken en te draaien.</p>
+<p>Dan het AI-deel. We gebruiken LangChain + LangGraph voor de taalmodel-workflows. Met deze twee libraries heb je in no-time een AI agent draaien, die je afgebakende taken kan laten uitvoeren. Prompts sturen we naar de servers van OpenRouter. Lokaal een taalmodel draaien is mogelijk — bijvoorbeeld met Ollama, maar een eigen server hiervoor opzetten is ingewikkeld en duur voor kleinschalig gebruik. Voor nu dus OpenRouter, maar dat is goed vervangbaar.</p>
+<p>We gebruiken het publiek beschikbare Qwen3-model (14B parameters): een relatief compact model dat goed omgaat met zowel smalltalk als ruimtelijke vragen.</p>
+<p>Voor de demovariant van Gaia is het gebruik van OpenRouter geen direct risico, zolang de gebruiker dit weet en geen gevoelige informatie deelt.</p>
+<p>Ideeen, vragen of suggesties voor Gaia? Of zou je graag willen samenwerken? Stuur één van ons een berichtje!</p>
+
+  </div>
+
+  <footer class="mt-12 py-6 px-6 md:px-10">
+    <a href="/blog" class="text-secondary font-semibold hover:underline">← <span data-i18n="blog.backToPosts">Back to posts</span></a>
+  </footer>
+</article>
 
         </div>
       </main>
