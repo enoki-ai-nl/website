@@ -28,8 +28,6 @@ We gebruiken Docker om deze componenten te verpakken en te draaien.
 
 Dan het AI-deel. We gebruiken LangChain + LangGraph voor de taalmodel-workflows. Met deze twee libraries heb je in no-time een AI agent draaien, die je afgebakende taken kan laten uitvoeren. Prompts sturen we naar de servers van OpenRouter. Lokaal een taalmodel draaien is mogelijk — bijvoorbeeld met Ollama, maar een eigen server hiervoor opzetten is ingewikkeld en duur voor kleinschalig gebruik. Voor nu dus OpenRouter, maar dat is goed vervangbaar.
 
-We gebruiken het publiek beschikbare Qwen3-model (14B parameters): een relatief compact model dat goed omgaat met zowel smalltalk als ruimtelijke vragen.
+We gebruiken het publiek beschikbare Qwen3-model (14 miljard parameters): een relatief compact model dat goed omgaat met zowel smalltalk als ruimtelijke vragen.
 
 Voor de demovariant van Gaia is het gebruik van OpenRouter geen direct risico, zolang de gebruiker dit weet en geen gevoelige informatie deelt.
-
-Ideeen, vragen of suggesties voor Gaia? Of zou je graag willen samenwerken? Stuur één van ons een berichtje!
